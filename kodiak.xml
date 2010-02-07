@@ -152,8 +152,8 @@ Prop diam: 2.43 m
     <ballast x="-5.77" y="0" z="-0.767" mass="1500"/>
     <ballast x="-1.410" y="0.00" z="0" mass="1400"/>
 
-    <weight x="2.5" y="0" z="0" mass-prop="/sim/weight[0]/weight-lb"/>
-    <weight x="0.0" y="0" z="0" mass-prop="/sim/weight[1]/weight-lb"/>
+    <weight x="3.5" y="0" z="0" mass-prop="/sim/weight[0]/weight-lb"/>
+    <weight x="5.57" y="0" z="0" mass-prop="/sim/weight[1]/weight-lb"/>
 
 <!--  <hitch name="aerotow" x="-2.5" y="0" z="-0.85"  force-is-calculated-by-other="1">
   <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
