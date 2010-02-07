@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Quest Aircraft Kodiak 100
+Jan 2010 Aimo Graf
+************************************************************************
+-->
+
+<PropertyList>
+    <sim>
+
+    <model>
+        <start-idling type="bool">0</start-idling>
+        <variant type="int">0</variant>
+    </model>
+
+    <view n="0">
+        <internal archive="y">true</internal>
+        <name>Cockpit</name>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <default-field-of-view-deg>60</default-field-of-view-deg>
+            <x-offset-m type="double">-0.3</x-offset-m>
+            <y-offset-m type="double">1.0</y-offset-m>
+            <z-offset-m type="double">1.15</z-offset-m>
+            <pitch-offset-deg>-12</pitch-offset-deg>
+            <limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                  <heading-max-deg type="double">100</heading-max-deg>
+                  <x-offset-max-m type="double">0.22</x-offset-max-m>
+                  <x-offset-threshold-deg type="double">40</x-offset-threshold-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">160</heading-max-deg>
+                    <x-offset-max-m type="double">0.22</x-offset-max-m>
+                    <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+                </right>
+            </limits>
+        </config>
+    </view>
+
+    <current-view>
+        <config>
+            <default-field-of-view-deg>60</default-field-of-view-deg>
+        </config>
+    </current-view>
+
+    <airport>
+        <runways>
+            <start-offset-m>20</start-offset-m>
+        </runways>
+    </airport>
+
+    <systems>
+        <electrical>
+            <path></path>
+        </electrical>
+        <autopilot>
+            <path>Aircraft/kodiak/autopilot.xml</path>
+        </autopilot>
+    </systems>
+
+        <instrumentation>
+            <path>Aircraft/kodiak/instrumentation.xml</path>
+        </instrumentation>
+
+    <sound>
+        <path>Aircraft/kodiak/kodiak-sound.xml</path>
+    </sound>
+
+    <flaps>
+        <setting>0.000</setting>
+        <setting>0.125</setting>
+        <setting>0.250</setting>
+        <setting>0.375</setting>
+        <setting>0.500</setting>
+        <setting>0.625</setting>
+        <setting>0.750</setting>
+        <setting>0.875</setting>
+        <setting>1.000</setting>
+    </flaps>
+
+    <virtual-cockpit>true</virtual-cockpit>
+    <allow-toggle-cockpit>true</allow-toggle-cockpit>
+
+    <help>
+        <title>Kodiak 100</title>
+        <line>Please notice: This is an early-development version.
+Bug reports and xml-improvements send please to Aimo Graf (noteveryonelives@gmail.com)</line>
+    </help>
+
+    <weight n="0">
+        <name>Crew</name>
+        <weight-lb>360</weight-lb>
+        <max-lb>400</max-lb>
+        <min-lb>180</min-lb>
+    </weight>
+
+    <weight n="1">
+        <name>Pax/Baggage</name>
+        <weight-lb>1898</weight-lb>
+        <max-lb>4000</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+    <yokes-visible type="bool">1</yokes-visible>
+
+</sim>
+
+<controls>
+        <electric>
+            <battery-switch type = "bool">0</battery-switch>
+            <avionics-switch type = "bool">0</avionics-switch>
+            <external-power type = "bool">0</external-power>
+            <engine n="0">
+                <generator>false</generator>
+            </engine>
+            <engine n="1">
+                <generator>false</generator>
+            </engine>
+        </electric>
+
+        <lighting>
+            <instrument-lights>0</instrument-lights>
+        </lighting>
+ 
+        <engines>
+        <fire-test type="bool">0</fire-test>
+            <engine n="0">
+                <condition>0</condition>
+                <cutoff>0</cutoff>
+                <mixture>0</mixture>
+                <propeller-pitch>0</propeller-pitch>
+            </engine>
+            <engine n="1">
+                <condition>0</condition>
+                <cutoff>0</cutoff>
+                <mixture>0</mixture>
+                <propeller-pitch>0</propeller-pitch>
+            </engine>
+        </engines>
+</controls>
+
+<consumables>
+    <fuel>
+        <tank n="0">
+            <name>Front Tank</name>
+        </tank>
+        <tank n="1">
+            <name>Rear Tank</name>
+        </tank>
+    </fuel>
+</consumables>
+
+    <instrumentation>
+        <flightdirector>
+            <serviceable>true</serviceable>
+            </flightdirector>
+    <altimeter>
+        <millibars type= "double">0</millibars>
+    </altimeter>
+    <transponder>
+        <inputs>
+            <serviceable type="bool">true</serviceable>
+        </inputs>
+    </transponder>
+    <nav n="0">
+        <serviceable type="bool">1</serviceable>
+    </nav>
+    <nav n="1">
+        <serviceable type="bool">1</serviceable>
+    </nav>
+    <comm n="0">
+        <serviceable type="bool">1</serviceable>
+    </comm>
+    <comm n="1">
+        <serviceable type="bool">1</serviceable>
+    </comm>
+    </instrumentation>
+
+    <engines>
+        <engine n="0">
+            <running>0</running>
+            <rpm>0</rpm>
+            <fuel-flow-pph type="float">0</fuel-flow-pph>
+        </engine>
+        <engine n="1">
+            <running>0</running>
+            <rpm>0</rpm>
+            <fuel-flow-pph type="float">0</fuel-flow-pph>
+        </engine>
+    </engines>
+
+    <autopilot>
+        <locks>
+            <passive-mode type="bool">true</passive-mode>
+        </locks>
+    </autopilot>
+
+    <environment>
+        <turbulence>
+        <use-cloud-turbulence>true</use-cloud-turbulence>
+        </turbulence>
+    </environment>
+
+</PropertyList>

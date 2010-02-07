@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>m877.ac</path>
+
+<animation>
+    <type>select</type>
+    <object-name>gmt</object-name>
+    <condition>
+        <equals>
+            <property>instrumentation/clock/m877/mode</property>
+            <value>0</value>
+        </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>lt</object-name>
+    <condition>
+        <equals>
+            <property>instrumentation/clock/m877/mode</property>
+            <value>1</value>
+        </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>ft</object-name>
+    <condition>
+        <equals>
+            <property>instrumentation/clock/m877/mode</property>
+            <value>2</value>
+        </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>et</object-name>
+    <condition>
+        <equals>
+            <property>instrumentation/clock/m877/mode</property>
+            <value>3</value>
+        </equals>
+    </condition>
+</animation>
+
+<animation>
+    <type>textranslate</type>
+    <object-name>HR.001</object-name>
+    <property>instrumentation/clock/m877/indicated-hour</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>textranslate</type>
+    <object-name>HR.002</object-name>
+    <property>instrumentation/clock/m877/indicated-hour</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>textranslate</type>
+    <object-name>MN.001</object-name>
+    <property>instrumentation/clock/m877/indicated-min</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>textranslate</type>
+    <object-name>MN.002</object-name>
+    <property>instrumentation/clock/m877/indicated-min</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+</animation>
+
+<!--  Hotspots  -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>SEL.btn</object-name>
+        <visible>1</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/clock/m877/mode</property>
+                <step>1</step>
+                <min>0</min>
+                <max>4</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+
+</PropertyList>

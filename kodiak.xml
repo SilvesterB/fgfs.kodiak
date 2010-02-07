@@ -1,0 +1,163 @@
+<!--
+Quest Aircraft Kodiak 100
+January 2010 by Aimo Graf and Silvester Brack
+-->
+
+<airplane mass="3700">
+
+    <approach speed="77" aoa="0" fuel="1">
+        <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+        <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
+        <control-setting axis="/controls/engines/engine[0]/condition" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[1]/condition" value="1.0"/>
+        <control-setting axis="/controls/flight/flaps" value="0.5"/>
+    </approach>
+
+    <cruise speed="185" alt="25000" fuel="1"> 
+        <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[0]/condition" value="1.0"/>
+        <control-setting axis="/controls/engines/engine[1]/condition" value="1.0"/>
+        <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    </cruise>
+
+    <cockpit x="0" y="0" z="0"/>
+
+                 <!-- Fuselage -->
+    
+<fuselage ax="0" ay="0" az="0.004" bx="-0.576" by="0" bz="0.004" width="0.456" midpoint="1" taper="0" idrag="1"/> <!-- Spinner -->
+
+<fuselage ax="-0.585" ay="0" az="-0.116" bx="-1.410" by="0" bz="-0.116" width="1" midpoint="1" taper="0.5" idrag="1"/> <!-- Motorhaube 1 -->
+
+<fuselage ax="-1.410" ay="0" az="-0.116" bx="-2.282" by="0" bz="-0.116" width="1" midpoint="1" taper="1" idrag="1"/> <!-- Motorhaube 2 -->
+
+<fuselage ax="-1.792" ay="0" az="-0.167" bx="-3.595" by="0" bz="0.182" width="1.656" midpoint="1" taper="0.5" idrag="1" /> <!-- Frontscheibe -->
+
+<fuselage ax="-3.369" ay="0" az="0.169" bx="-6.762" by="0" bz="0.208" width="1.656" midpoint="1" taper="1" idrag="1" /> <!-- Kabine -->
+
+<fuselage ax="-6.461" ay="0" az="0.169" bx="-10.002" by="0" bz="0.702" width="1.656" midpoint="0" taper="0" idrag="1"/> <!-- Heck -->
+
+<fuselage ax="-3.563" ay="0.276" az="-0.447" bx="-3.969" by="3.241" bz="0.889" width="0.2" midpoint="0" taper="1" idrag="1"/> <!-- Linke Strebe -->
+
+<fuselage ax="-3.563" ay="-0.276" az="-0.447" bx="-3.969" by="-3.241" bz="0.889" width="0.2" midpoint="0" taper="1" idrag="1"/> <!-- Rechte Strebe -->
+
+<fuselage ax="-4.619" ay="0.276" az="-0.336" bx="-4.559" by="1.596" bz="-1.204" width="0.5" midpoint="0" taper="0.2" idrag="1"/> <!-- Linkes Fahrwerksbein -->
+
+<fuselage ax="-4.619" ay="-0.276" az="-0.336" bx="-4.559" by="-1.596" bz="-1.204" width="0.5" midpoint="0" taper="0.2" idrag="1"/> <!-- Rechtes Fahrwerksbein -->
+
+<fuselage ax="-1.573" ay="0" az="-0.147" bx="-1.354" by="0" bz="-1.01" width="0.882" midpoint="0" taper="0.2" idrag="1"/> <!-- Fahrwerk vorne Verkleidung -->
+
+<fuselage ax="-1.375" ay="0" az="-0.986" bx="-1.316" by="0" bz="-1.300" width="0.130" midpoint="0" taper="1" idrag="1"/> <!-- Fahrwerksbein vorne -->
+
+<fuselage ax="-4.573" ay="1.765" az="-1.214" bx="-4.574" by="1.478" bz="-1.214" width="0.762" midpoint="0" taper="1" idrag="1"/> <!-- Rad links -->
+
+<fuselage ax="-4.573" ay="-1.765" az="-1.214" bx="-4.574" by="-1.478" bz="-1.214" width="0.762" midpoint="0" taper="1" idrag="1"/> <!-- Rad rechts -->
+
+<!-- **************** TRAGFLAECHEN ***************
+    Aus den Specifications:
+	span = 13.72 Meter
+	horizontal span = 6.1 Meter
+	wing area = 22.30 qm
+************************************************-->
+
+    <wing x="-4.222" y="0.639" z="0.767" length="6.1" chord="1.3"
+        sweep="0" dihedral="3" taper="0.72"  camber="0.0020" incidence="1">
+        <stall aoa="15" width="6" peak="1.5"/>
+        <flap0 start=".04" end=".57" lift="1.6" drag="1.8"/>
+        <flap1 start=".57" end=".95" lift="1.3" drag="1.2"/>
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-speed control="FLAP0" transition-time="20"/>
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+        <control-output control="FLAP1" side="left"
+        prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right"
+        prop="/surface-positions/right-aileron-pos-norm"/>
+    </wing>
+
+    <hstab x="-9.405" y="0.108" z="0.686" length="2.75" chord="0.569"
+        sweep="0" dihedral="0" taper="1">
+        <stall aoa="18" width="4" peak="1.5"/>
+        <flap0 start="0" end="1.06" lift="1.3" drag="1.1"/>
+        <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+        <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+        <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+    </hstab>
+
+    <vstab x="-8.501" y="0.00" z="0.836" length="2.306" chord="2.9"
+        sweep="26.35" taper="0.35" >
+        <stall aoa="16" width="4" peak="1.5"/>
+        <flap0 start="0" end="1" lift="1.2" drag="1.2"/>
+        <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+        <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+        <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+    </vstab>
+
+<!--
+2500 lbs (Jet A)
+Fuel burn ... 580 lbs/hr
+    <tank x="0.66" y="0" z="-0.5" capacity="1000" jet="true"/>
+    <tank x="-1.32" y="0" z="0.5" capacity="1400" jet="true"/>-->
+    <tank x="-4.322" y="0.639" z="-0.767" capacity="1400" jet="true"/>
+
+    <gear x="-1.197" y="0.00" z="-1.803" compression=".4"
+    spring="0.9" damp="1.0" sfric="0.6" dfric="0.5">
+        <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
+    </gear>
+
+    <gear x="-4.569" y="1.63" z="-1.661" compression=".3"
+    spring="1.0" damp="0.6" sfric="0.8" dfric="0.7">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+    </gear>
+
+    <gear x="-4.322" y="-1.63" z="-1.661" compression=".3"
+    spring="1.0" damp="0.6" sfric="0.8" dfric="0.7">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+    </gear>
+
+<!--
+Engine:
+PW PT6A-34
+750 shp
+Prop diam: 2.43 m 
+-->
+
+<propeller x="-0.427" y="0" z="0"
+        mass="338" moment="80" radius="1.22"
+        cruise-speed="185" cruise-rpm="2200"
+        cruise-power="750" cruise-alt="10000"
+        min-rpm="1700" max-rpm="2200"
+        fine-stop="0.25" coarse-stop="4.0">
+        <turbine-engine
+            eng-power="750" eng-rpm="2200" alt="10000"
+            flat-rating="750" max-n2="101.5" bsfc="0.468"/>
+        <actionpt x="0" y="0" z="0"/>
+        <control-input axis="/controls/engines/engine[0]/throttle"
+        control="THROTTLE"/>
+        <control-input axis="/controls/engines/engine[0]/condition"
+        control="CONDLEVER"/>
+        <control-input axis="/controls/engines/engine[0]/starter"
+        control="STARTER"/>
+        <control-input axis="/controls/engines/engine[0]/propeller-pitch"
+        control="ADVANCE"/>
+        <control-input axis="/controls/engines/engine[0]/propeller-feather"
+        control="PROPFEATHER"/>
+    </propeller>
+
+
+    <ballast x="-10.5" y="0" z="0" mass="-10"/>
+    <ballast x="-5.77" y="0" z="-0.767" mass="1500"/>
+    <ballast x="-1.410" y="0.00" z="0" mass="1400"/>
+
+    <weight x="2.5" y="0" z="0" mass-prop="/sim/weight[0]/weight-lb"/>
+    <weight x="0.0" y="0" z="0" mass-prop="/sim/weight[1]/weight-lb"/>
+
+<!--  <hitch name="aerotow" x="-2.5" y="0" z="-0.85"  force-is-calculated-by-other="1">
+  <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
+  <winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
+</hitch>-->
+
+</airplane>

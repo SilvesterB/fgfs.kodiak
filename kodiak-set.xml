@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Quest Aircraft Kodiak 100
+Jan 2010 Aimo Graf
+************************************************************************
+-->
+
+<PropertyList include="kodiak-base.xml">
+    <sim>
+        <description>Quest Aircraft Kodiak 100</description>
+        <status>early-developement</status>
+        <author>Aimo Graf</author>
+        <flight-model>yasim</flight-model>
+        <aero>kodiak</aero>
+        <fuel-fraction>0.5</fuel-fraction>
+        <startup>
+            <splash-texture>Aircraft/kodiak/splash.rgb</splash-texture>
+        </startup>
+
+    <model>
+        <path>Aircraft/kodiak/Models/kodiak.xml</path>
+        <remove-doors type="bool">0</remove-doors>
+    </model>
+</sim>
+
+<controls>
+        <gear>
+            <brake-parking>1</brake-parking>
+        </gear>
+</controls>
+
+    <nasal>
+        <dhc6>
+            <file>Aircraft/kodiak/Nasal/Electrical.nas</file>
+            <file>Aircraft/kodiak/Nasal/systems.nas</file>
+            <file>Aircraft/kodiak/Nasal/vhf22.nas</file>
+            <file>Aircraft/kodiak/Nasal/vir32.nas</file>
+            <file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
+        </dhc6>
+    </nasal>
+
+  <hitch name="aerotow" x="-6.2" y="0" z="-0.12"  force-is-calculated-by-other="1">
+  <tow length="60" weight-per-meter="0.035" elastic-constant="9000" break-force="10000" mp-auto-connect-period="1.0"/>
+  <winch max-tow-length="1000" min-tow-length="60" initial-tow-length="60"/>
+</hitch>
+
+</PropertyList>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Kenn Borek Air LTD</name>
+            <index type="int">1</index>
+            <texture>paint2.rgb</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

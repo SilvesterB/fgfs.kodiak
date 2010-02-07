@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>kodiak.ac</path>
+<offsets>
+	<pitch-deg>8.1</pitch-deg>
+	<z-m>0.9</z-m>   
+	<x-m>-2.5</x-m>
+</offsets>
+
+
+<!-- Animations -->
+
+<animation>
+	<type>rotate</type>
+	<object-name>Rad_vorne</object-name>
+	<object-name>Felge_vorne</object-name>
+	<object-name>Fahrwerk_vorne_5</object-name>
+	<object-name>Fahrwerk_vorne_5.001</object-name>
+	<object-name>Fahrwerk_vorne_4</object-name>
+	<object-name>Fahrwerk_vorne_4.001</object-name>
+	<object-name>Fahrwerk_vorne_3</object-name>
+	<object-name>Fahrwerk_vorne_3.001</object-name>
+	<object-name>Fahrwerk_vorne_2</object-name>
+	<object-name>Fahrwerk_vorne_2.001</object-name>
+	<property>gear/gear/caster-angle-deg</property>
+	<factor>-1</factor>
+	<center>
+		<x-m>1.251</x-m>
+		<y-m>0.000</y-m>
+		<z-m>-1.534</z-m>
+	</center>
+	<axis>
+		<x1-m>1.251</x1-m>
+		<y1-m>0.000</y1-m>
+		<z1-m>-1.534</z1-m>
+		<x2-m>1.381</x2-m>
+		<y2-m>0.000</y2-m>
+		<z2-m>-0.917</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>spin</type>
+	<object-name>spinner</object-name>
+	<object-name>Prop_1</object-name>
+	<object-name>Prop_2</object-name>
+	<object-name>Prop_3</object-name>
+	<object-name>Prop_4</object-name>
+	<property>/engines/engine/rpm</property>
+	<factor>-1</factor>
+	<condition>
+                <greater-than>
+                    <property>/engines/engine/running</property>
+                    <value>0</value>
+                </greater-than>
+            </condition>
+	<center>
+		<x-m>0.000</x-m>
+		<y-m>0.000</y-m>
+		<z-m>0.004</z-m>
+	</center>
+	<axis>
+		<x1-m>0.000</x1-m>
+		<y1-m>0.000</y1-m>
+		<z1-m>-0.004</z1-m>
+		<x2-m>0.576</x2-m>
+		<y2-m>0.000</y2-m>
+		<z2-m>0.004</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Klappen</object-name>
+	<property>/controls/flight/flaps</property>
+	<factor>35</factor>
+	<center>
+		<x-m>4.761</x-m>
+		<y-m>0.858</y-m>
+		<z-m>0.760</z-m>
+	</center>
+	<axis>
+		<x1-m>4.761</x1-m>
+		<y1-m>0.858</y1-m>
+		<z1-m>0.760</z1-m>
+		<x2-m>4.708</x2-m>
+		<y2-m>4.149</y2-m>
+		<z2-m>0.949</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Klappen.001</object-name>
+	<property>/controls/flight/flaps</property>
+	<factor>-35</factor>
+	<center>
+		<x-m>4.761</x-m>
+		<y-m>-0.860</y-m>
+		<z-m>0.760</z-m>
+	</center>
+	<axis>
+		<x1-m>4.761</x1-m>
+		<y1-m>-0.860</y1-m>
+		<z1-m>0.760</z1-m>
+		<x2-m>4.708</x2-m>
+		<y2-m>-4.151</y2-m>
+		<z2-m>0.949</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Seitenruder</object-name>
+	<object-name>Seitenruder.001</object-name>
+	<property>/controls/flight/rudder</property>
+	<factor>-20</factor>
+	<center>
+		<x-m>9.847</x-m>
+		<y-m>0.000</y-m>
+		<z-m>3.074</z-m>
+	</center>
+	<axis>
+		<x1-m>9.874</x1-m>
+		<y1-m>0.000</y1-m>
+		<z1-m>3.074</z1-m>
+		<x2-m>9.126</x2-m>
+		<y2-m>0.000</y2-m>
+		<z2-m>0.847</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Querruder</object-name>
+	<property>/controls/flight/aileron</property>
+	<factor>-20</factor>
+	<center>
+		<x-m>4.744</x-m>
+		<y-m>4.179</y-m>
+		<z-m>0.945</z-m>
+	</center>
+	<axis>
+		<x1-m>4.744</x1-m>
+		<y1-m>4.179</y1-m>
+		<z1-m>0.945</z1-m>
+		<x2-m>4.518</x2-m>
+		<y2-m>6.369</y2-m>
+		<z2-m>1.099</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Querruder.001</object-name>
+	<property>/controls/flight/aileron</property>
+	<factor>-20</factor>
+	<center>
+		<x-m>4.744</x-m>
+		<y-m>-4.179</y-m>
+		<z-m>0.945</z-m>
+	</center>
+	<axis>
+		<x1-m>4.744</x1-m>
+		<y1-m>-4.179</y1-m>
+		<z1-m>0.945</z1-m>
+		<x2-m>4.518</x2-m>
+		<y2-m>-6.369</y2-m>
+		<z2-m>1.099</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Circle.001</object-name>
+	<property>/controls/flight/elevator</property>
+	<factor>20</factor>
+	<center>
+		<x-m>9.605</x-m>
+		<y-m>0.140</y-m>
+		<z-m>0.685</z-m>
+	</center>
+	<axis>
+		<x1-m>9.605</x1-m>
+		<y1-m>0.140</y1-m>
+		<z1-m>0.685</z1-m>
+		<x2-m>9.602</x2-m>
+		<y2-m>2.750</y2-m>
+		<z2-m>0.685</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Circle.005</object-name>
+	<property>/controls/flight/elevator</property>
+	<factor>-20</factor>
+	<center>
+		<x-m>9.605</x-m>
+		<y-m>-0.140</y-m>
+		<z-m>0.685</z-m>
+	</center>
+	<axis>
+		<x1-m>9.605</x1-m>
+		<y1-m>-0.140</y1-m>
+		<z1-m>0.685</z1-m>
+		<x2-m>9.602</x2-m>
+		<y2-m>-2.750</y2-m>
+		<z2-m>0.685</z2-m>
+	</axis>
+</animation>
+
+<!-- Instruments -->
+
+<model>
+	<name>Artifical Horizon</name>
+	<path>Aircraft/Instruments-3d/ai/ai.xml</path>
+	<offsets>
+		<x-m>2.260</x-m>
+		<y-m>-0.464</y-m>
+		<z-m>0.138</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>Altitude</name>
+	<path>Aircraft/Instruments-3d/alt/alt.xml</path>
+	<offsets>
+		<x-m>2.260</x-m>
+		<y-m>-0.364</y-m>
+		<z-m>0.138</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>Speed</name>
+	<path>Aircraft/Instruments-3d/asi/asi.xml</path>
+	<offsets>
+		<x-m>2.260</x-m>
+		<y-m>-0.264</y-m>
+		<z-m>0.138</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>Throttle Quadrant</name>
+	<path>Aircraft/Instruments-3d/quadrant/quadrant.xml</path>
+	<offsets>
+		<x-m>2.460</x-m>
+		<y-m>-0.100</y-m>
+		<z-m>0.200</z-m>
+	</offsets>
+</model>
+	
+</PropertyList>

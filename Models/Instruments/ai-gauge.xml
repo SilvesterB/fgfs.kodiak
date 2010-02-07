@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>ai-gauge.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>AImrkr</object-name>
+        <object-name>AIring</object-name>
+        <object-name>AIneedle</object-name>
+        <emission>
+           <red>0.028</red>
+            <green>0.014</green>
+            <blue>0.007</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>AIneedle</object-name>
+        <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
+        <factor>-0.001</factor>
+        <min-m>-0.01575</min-m>
+        <max-m>0.01575</max-m>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>AIneedle</object-name>
+        <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+        <factor>-1</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>AIring</object-name>
+        <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
+        <factor>-1</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+</PropertyList>

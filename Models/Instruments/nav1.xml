@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<!-- CTL 32 Nav2 Control for VIR-32 receiver
+Active and preset displayed +
+6 frequency memory storage
+2.375"W x 2.625"H
+Freq. range 108.000 - 117.975 (normal) 
+Strap option 133.00 - 135.95
+ 05 khz spacing
+Syd Adams
+ -->
+
+<PropertyList>
+
+    <path>ctl32.ac</path>
+
+    <animation>
+        <type>select</type>
+        <object-name>freq.001</object-name>
+        <object-name>freq.002</object-name>
+        <object-name>freq.003</object-name>
+        <object-name>freq.dec</object-name>
+        <object-name>freq.004</object-name>
+        <object-name>freq.005</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/nav</property>
+                <value>1</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>stby.001</object-name>
+        <object-name>stby.002</object-name>
+        <object-name>stby.003</object-name>
+        <object-name>stby.dec</object-name>
+        <object-name>stby.004</object-name>
+        <object-name>stby.005</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/nav</property>
+                <value>1</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>mem.annun</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/nav</property>
+                <value>1</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>CTL-32.pwr</object-name>
+        <property>instrumentation/nav/serviceable</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>1.0</ind><dep>30</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>-0.014</y-m>
+            <z-m>-0.018</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!--    Active Frequency   -->
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.001</object-name>
+        <property>instrumentation/VIR-32/nav1</property>
+        <factor>0.00001</factor>
+        <step>10000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.002</object-name>
+        <property>instrumentation/VIR-32/nav1</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.003</object-name>
+        <property>instrumentation/VIR-32/nav1</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.004</object-name>
+        <property>instrumentation/VIR-32/nav1</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>freq.005</object-name>
+        <property>instrumentation/VIR-32/nav1</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!--    Preselected Frequency     -->
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.001</object-name>
+        <property>instrumentation/VIR-32/standby1</property>
+        <factor>0.00001</factor>
+        <step>10000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.002</object-name>
+        <property>instrumentation/VIR-32/standby1</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.003</object-name>
+        <property>instrumentation/VIR-32/standby1</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.004</object-name>
+        <property>instrumentation/VIR-32/standby1</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>stby.005</object-name>
+        <property>instrumentation/VIR-32/standby1</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>CTL-32.xfr</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+            <command>property-swap</command>
+            <property>instrumentation/VIR-32/nav1</property>
+            <property>instrumentation/VIR-32/standby1</property>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>pwr.off</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+            <command>property-assign</command>
+            <property>instrumentation/nav/serviceable</property>
+            <value>false</value>
+        </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>pwr.on</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>instrumentation/nav/serviceable</property>
+                <value>true</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>freq.dwn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/VIR-32/standby1</property>
+                <step>-5</step>
+                <min>10800</min>
+                <max>11800</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>freq.up</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/VIR-32/standby1</property>
+                <step>5</step>
+                <min>10800</min>
+                <max>11800</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>freq.dwn</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/VIR-32/standby1</property>
+                <step>-100</step>
+                <min>10800</min>
+                <max>11800</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>freq.up</object-name>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                <command>property-adjust</command>
+                <property>instrumentation/VIR-32/standby1</property>
+                <step>100</step>
+                <min>10800</min>
+                <max>11800</max>
+                <wrap>true</wrap>
+            </binding>
+        </action>
+    </animation>
+ 
+</PropertyList>

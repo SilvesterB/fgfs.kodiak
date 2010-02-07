@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Trans North</name>
+            <index type="int">0</index>
+            <texture>paint1.rgb</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

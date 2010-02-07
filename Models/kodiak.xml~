@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>kodiak.ac</path>
+
+
+<!-- Animations -->
+
+<animation>
+	<type>rotate</type>
+	<object-name>Rad_vorne</object-name>
+	<object-name>Felge_vorne</object-name>
+	<object-name>Fahrwerk_vorne_5</object-name>
+	<object-name>Fahrwerk_vorne_5.001</object-name>
+	<object-name>Fahrwerk_vorne_4</object-name>
+	<object-name>Fahrwerk_vorne_4.001</object-name>
+	<object-name>Fahrwerk_vorne_3</object-name>
+	<object-name>Fahrwerk_vorne_3.001</object-name>
+	<object-name>Fahrwerk_vorne_2</object-name>
+	<object-name>Fahrwerk_vorne_2.001</object-name>
+	<property>gear/gear/caster-angle-deg</property>
+	<center>
+		<x-m>-7.605</x-m>
+		<y-m>0.000</y-m>
+		<z-m>-1.534</z-m>
+	</center>
+	<factor>-1</factor>
+	<axis>
+		<x1-m>-7.409</x1-m>
+		<y1-m>0.000</y1-m>
+		<z1-m>-0.553</z1-m>
+		<x2-m>-7.802</x2-m>
+		<y2-m>0.000</y2-m>
+		<z2-m>-2.514</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>spin</type>
+	<object-name>spinner</object-name>
+	<object-name>Prop_1</object-name>
+	<object-name>Prop_2</object-name>
+	<object-name>Prop_3</object-name>
+	<object-name>Prop_4</object-name>
+	<property>/engines/engine/rpm</property>
+	<center>
+		<x-m>-8.280</x-m>
+		<y-m>0.000</y-m>
+		<z-m>0.004</z-m>
+	</center>
+	<axis>
+		<x1-m>-8.856</x1-m>
+		<y1-m>0.000</y1-m>
+		<z1-m>-0.004</z1-m>
+		<x2-m>-8.280</x2-m>
+		<y2-m>0.000</y2-m>
+		<z2-m>0.004</z2-m>
+	</axis>
+	<factor>1000</factor>
+</animation>
+
+
+
+
+<!-- Instruments -->
+
+<model>
+	<name>Artifical Horizon</name>
+	<path>Aircraft/Instruments-3d/ai/ai.xml</path>
+	<offsets>
+		<x-m>-6.626</x-m>
+		<y-m>-0.228</y-m>
+		<z-m>0.264</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>Altitude</name>
+	<path>Aircraft/Instruments-3d/alt/alt.xml</path>
+	<offsets>
+		<x-m>-6.626</x-m>
+		<y-m>-0.033</y-m>
+		<z-m>0.264</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>Speed</name>
+	<path>Aircraft/Instruments-3d/asi/asi.xml</path>
+	<offsets>
+		<x-m>-6.616</x-m>
+		<y-m>-0.118</y-m>
+		<z-m>0.264</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>PFD</name>
+	<path>Aircraft/Instruments-3d/G1000/PFD/pfd.xml</path>
+	<offsets>
+		<x-m>-6.616</x-m>
+		<y-m>-0.118</y-m>
+		<z-m>0.056</z-m>
+	</offsets>
+</model>
+
+</PropertyList>
